@@ -28,4 +28,4 @@ Suleyman's 18-month timeline might be aggressive. Capgemini's €700 million bet
 
 The professionals who thrive will not be the ones who grind harder. They will be the ones who stopped grinding and started thinking about what they are actually for.
 
-*Andrew Perkins is the author of [After the Grind: Rethinking Your Business Career in the Age of Artificial Intelligence and Robotics](https://www.amazon.com/dp/B0DV2DP74T) and Chair of the Department of Marketing and International Business at Washington State University's Carson College of Business.*
+*Andrew Perkins is the author of [After the Grind: Rethinking Your Business Career in the Age of Artificial Intelligence and Robotics](https://www.amazon.com/dp/B0GHT7DN7F) and Chair of the Department of Marketing and International Business at Washington State University's Carson College of Business.*

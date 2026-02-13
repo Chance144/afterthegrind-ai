@@ -23,7 +23,7 @@ theme = 'paper'
   [[menu.main]]
     identifier = 'book'
     name = 'The Book'
-    url = 'https://www.amazon.com/dp/B0DV2DP74T'
+    url = 'https://www.amazon.com/dp/B0GHT7DN7F'
     weight = 20
 
 [markup]
