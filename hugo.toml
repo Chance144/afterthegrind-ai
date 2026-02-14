@@ -2,14 +2,21 @@ baseURL = 'https://afterthegrind.ai/'
 languageCode = 'en-us'
 title = 'After the Grind'
 theme = 'paper'
+copyright = '© 2026 Andrew Perkins'
 
 [params]
+  env = "production"
+  description = "Daily essays on AI, the future of work, and what it means to be a professional when the machines can do the tasks. By Andrew Perkins."
   subtitle = 'Rethinking Work in the Age of AI'
   avatar = ''
+  linkedin = 'andrewperkins'
+  rss = true
   twitter = ''
   github = ''
   disqus = ''
   commentURL = ''
+  name = "Andrew Perkins"
+  bio = "Author of *After the Grind*. Chair of Marketing & International Business, WSU."
 
 [params.author]
   name = 'Andrew Perkins'
@@ -21,9 +28,14 @@ theme = 'paper'
     url = '/about/'
     weight = 10
   [[menu.main]]
+    identifier = 'tags'
+    name = 'Topics'
+    url = '/tags/'
+    weight = 15
+  [[menu.main]]
     identifier = 'book'
     name = 'The Book'
-    url = 'https://www.amazon.com/dp/B0GHT7DN7F'
+    url = '/book/'
     weight = 20
 
 [markup]

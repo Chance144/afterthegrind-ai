@@ -1,7 +1,7 @@
 ---
 title: "25 Papers Later"
 date: 2026-02-14
-draft: true
+draft: false
 summary: "What 25 years of studying how humans think, feel, and decide taught me about our value in a machine age. A personal reflection on a research arc from trade dress to moral outrage."
 tags: ["research", "personal", "consumer psychology", "AI", "career reflection"]
 ---

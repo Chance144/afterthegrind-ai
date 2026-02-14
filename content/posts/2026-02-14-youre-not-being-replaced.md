@@ -1,7 +1,7 @@
 ---
 title: "You're Not Being Replaced. You're Being Reclassified."
 date: 2026-02-14
-draft: true
+draft: false
 summary: "The jobs that survive AI aren't the 'safe' ones. They're the human ones. The 4I framework shows us exactly where human value lives when the machines take over the grind."
 tags: ["AI", "careers", "4I framework", "human value", "future of work"]
 ---
