@@ -37,6 +37,11 @@ copyright = '© 2026 Andrew Perkins'
     name = 'The Book'
     url = '/book/'
     weight = 20
+  [[menu.main]]
+    identifier = 'subscribe'
+    name = 'Subscribe'
+    url = '/subscribe/'
+    weight = 25
 
 [markup]
   [markup.goldmark]

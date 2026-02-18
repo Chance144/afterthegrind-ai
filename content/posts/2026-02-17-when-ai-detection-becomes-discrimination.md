@@ -1,0 +1,47 @@
+---
+title: "When AI Detection Becomes Discrimination"
+date: 2026-02-17
+draft: true
+summary: "A University of Michigan student with documented disabilities is suing over AI cheating accusations. The case exposes a deeper problem: universities are building enforcement systems they can't control on detection tools they can't trust."
+tags: ["AI", "higher education", "AI detection", "academic integrity", "disability"]
+---
+
+A student at the University of Michigan is suing the school for disability discrimination. The core allegation: an instructor accused them of using AI to write their papers, based largely on subjective judgments about writing style and outputs from AI comparison tools. The student has documented disabilities, including generalized anxiety disorder and OCD, and their legal team argues that traits associated with those conditions, like formal tone, meticulous structure, and stylistic consistency, were misread as signs of artificial generation.
+
+The university moved forward with disciplinary action anyway.
+
+This case should make every administrator in higher education uncomfortable. Not because it involves one bad call by one instructor, but because it exposes the structural problem lurking underneath every university's AI policy: we have built enforcement regimes on top of detection tools that do not work reliably, and the people most likely to get caught in the crossfire are the ones least equipped to fight back.
+
+## The Detection Problem Nobody Wants to Talk About
+
+AI detection tools are, to put it plainly, not good enough for the weight we are placing on them. Every major tool on the market produces false positives. Some flag non-native English speakers at higher rates. Some flag formal academic writing at higher rates. Some flag students who outline carefully and revise thoroughly, because clean, structured prose apparently looks suspicious now.
+
+The Michigan case puts a fine point on this. The instructor reportedly used "AI comparison outputs generated using Plaintiff's own outlines and content" as evidence. Think about what that means: take a student's notes, feed them to an AI, get something back that resembles the student's paper, and call that proof. That is not detection. That is confirmation bias with a software license.
+
+And yet universities are leaning on these tools more, not less. The pressure is understandable. Professors are overwhelmed. The volume of AI-generated submissions is real. Institutions feel they need to do something. But "something" cannot mean punishing students based on tools that are functionally unreliable, especially when those students have documented reasons for writing the way they do.
+
+## The Disability Angle Is Not a Special Case
+
+It would be easy to read this story as a narrow disability rights issue. A student had accommodations, the school ignored them, lawyers got involved. Case closed.
+
+But the disability angle here is actually a window into a much bigger problem. The traits that got this student flagged, formal tone, consistent structure, careful word choice, are not unique to people with anxiety disorders. They describe any student who takes writing seriously. They describe students for whom English is a second language and who have learned to write with deliberate precision. They describe students who use grammar tools, who revise multiple drafts, who care about their work.
+
+If AI detection tools are triggering on "writes too well" or "writes too consistently," then the problem is not with any particular student population. The problem is that the tools cannot distinguish between human effort and machine output, and universities are pretending otherwise.
+
+## What This Means for Business Schools
+
+Business schools have a particular version of this problem. The writing in a marketing strategy paper or a case analysis is supposed to be structured, professional, and polished. That is literally what we are teaching students to produce. So when an AI detection tool flags a well-organized case analysis because it reads like something a language model might generate, what exactly have we detected? Good writing? The successful application of what we taught?
+
+The FT reported just yesterday that business schools are still searching for clear AI guidelines. Dean David Marchick at American University's Kogod School of Business noted the "disintermediation of traditional education" and the need for AI literacy across every aspect of teaching. He is right. But literacy has to include institutional literacy about what these detection tools can and cannot do. If your policy depends on a tool that cannot reliably tell the difference between a diligent student and a chatbot, your policy is broken.
+
+## The Real Question
+
+Here is what I keep coming back to: why are we spending so much institutional energy trying to catch students using AI, and so little energy rethinking what we are asking them to do?
+
+If a five-paragraph essay can be generated by a chatbot in twelve seconds, maybe the five-paragraph essay is not the right assessment anymore. If a case analysis can be produced by Claude or GPT with a single prompt, maybe the case analysis needs to require something a model cannot do: original fieldwork, stakeholder interviews, live presentations where students defend their reasoning under questioning.
+
+The institutions that figure this out first will have a massive advantage. Not because they will be "AI-friendly" in some vague marketing sense, but because they will be teaching skills that actually matter in a world where AI handles the routine cognitive work. Interpretation. Integration. The ability to synthesize conflicting perspectives and make a judgment call. The interpersonal skills that no model replicates.
+
+The University of Michigan case is headed to federal court. Whatever the outcome, the underlying problem will not be resolved by a verdict. It will only be resolved when universities stop treating AI as a cheating problem and start treating it as a curriculum problem.
+
+The detection arms race is unwinnable. The redesign of what we teach and how we assess it? That is where the real work begins.
