@@ -4,7 +4,7 @@ date: 2026-02-17T10:00:00-08:00
 author: "Andrew Perkins"
 tags: ["AI", "future of work", "workforce", "white-collar jobs", "4I framework", "higher education"]
 summary: "Tech layoffs are accelerating, Microsoft says full automation is 18 months away, and a former Google ethicist warns of a jobs collapse by 2027. The question isn't whether AI will change everything. It's whether we'll prepare for what comes after."
-draft: true
+draft: false
 ---
 
 This week's headlines read like a countdown clock that nobody asked for.
