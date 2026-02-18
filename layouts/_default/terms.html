@@ -1,0 +1,16 @@
+{{- define "main" -}}
+
+<header class="mb-14">
+  <h1 class="my-0! pb-2.5">{{- .Title -}}</h1>
+</header>
+
+<div class="flex flex-wrap gap-3">
+  {{- range .Pages -}}
+  <a
+    class="rounded-lg bg-black/[3%] px-5 py-2 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+    href="{{- .Permalink -}}"
+  >{{- .Title -}} <span class="opacity-50">({{ .Pages.Len }})</span></a>
+  {{- end -}}
+</div>
+
+{{- end -}}
