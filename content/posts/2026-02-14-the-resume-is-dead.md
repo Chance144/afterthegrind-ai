@@ -1,7 +1,7 @@
 ---
 title: "The Resume Is Dead"
 date: 2026-02-14
-draft: true
+draft: false
 summary: "When AI can do the credentialed work, credentials stop being the signal. What replaces them? Judgment, taste, and the ability to sit with ambiguity."
 tags: ["AI", "careers", "credentials", "hiring", "human value"]
 ---
