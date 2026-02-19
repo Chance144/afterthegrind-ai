@@ -1,7 +1,7 @@
 ---
 title: "The AI-Washing Problem: When Companies Blame the Robot"
 date: 2026-02-17T06:00:00-08:00
-draft: true
+draft: false
 summary: "Tech layoffs keep climbing and CEOs keep pointing at AI. But a growing body of evidence suggests the robot is taking the blame for decisions that have nothing to do with automation."
 tags: ["AI", "workforce", "layoffs", "business", "higher education"]
 ---
