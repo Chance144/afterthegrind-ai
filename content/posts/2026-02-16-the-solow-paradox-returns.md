@@ -4,7 +4,7 @@ date: 2026-02-16
 author: "Andrew Perkins"
 tags: ["AI", "future of work", "workforce", "higher education", "4I framework"]
 summary: "AI dominates headlines but barely registers in economic data. Meanwhile, millions of workers lack the adaptive capacity to navigate what's coming. The gap between the noise and the reality tells us something important about human value."
-draft: true
+draft: false
 ---
 
 In 1987, economist Robert Solow made a famously dry observation: "You can see the computer age everywhere but in the productivity statistics." Nearly four decades later, Apollo Chief Economist Torsten Slok is [making the same point about AI](https://fortune.com/2026/02/14/ai-effect-macro-economic-data-labor-enhancement-some-sectors-workers-displacement/). Employment data, productivity metrics, inflation numbers, profit margins for companies outside the Magnificent 7: none of it shows AI transforming the economy. Not yet. The Solow Paradox is back, and it brought friends.
