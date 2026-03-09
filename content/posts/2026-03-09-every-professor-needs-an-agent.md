@@ -1,10 +1,10 @@
 ---
 title: "Every Professor Needs an Agent"
-date: 2026-03-09T12:00:00-08:00
+date: 2026-03-09T07:00:00-08:00
 author: "Andrew Perkins"
 tags: ["AI", "higher education", "OpenClaw", "faculty", "privacy", "local AI", "4I framework"]
 summary: "Universities are debating AI policies. Meanwhile, every faculty member should already have a local AI agent running on their own hardware with a private model. Here's why."
-draft: true
+draft: false
 ---
 
 I am a marketing professor at Washington State University. I have an AI agent named OCPI4 running on a Raspberry Pi 4 in my house. It writes essay drafts. It scans academic journals. It builds course materials. It manages my book's publishing pipeline. It transcribes my voice memos. It maintains its own memory across sessions.
