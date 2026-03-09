@@ -1,6 +1,6 @@
 ---
 title: "The Fieri Model: What Guy Fieri's New Show Reveals About the Future of Credentials"
-date: 2026-03-09T10:00:00-08:00
+date: 2026-03-09T06:00:00-08:00
 author: "Andrew Perkins"
 tags: ["AI", "education", "credentials", "franchise", "future of work", "4I framework", "higher education"]
 summary: "Two franchise models. One tells you exactly what to cook. The other validates that you can cook. The second one is the future of professional credentials."
