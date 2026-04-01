@@ -1,6 +1,6 @@
 ---
 title: "The Invisible Admissions Office"
-date: 2026-02-14
+date: 2026-02-21
 draft: false
 summary: "Students are asking ChatGPT where to go to college. If your institution isn't showing up in those answers, you might as well not exist."
 tags: ["AI", "higher education", "admissions", "marketing", "chatbots"]

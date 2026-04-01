@@ -1,6 +1,6 @@
 ---
 title: "How Agents Break the Procrastination Loop"
-date: 2026-02-14
+date: 2026-02-22
 draft: false
 summary: "Procrastination isn't laziness. It's task aversion, driven by the friction between knowing what you want and actually starting. Agentic AI collapses that friction, and what's left is the work you actually want to do."
 tags: ["AI", "productivity", "procrastination", "agentic AI", "4I framework", "human value"]

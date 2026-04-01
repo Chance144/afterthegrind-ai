@@ -1,6 +1,6 @@
 ---
 title: "Agents and the Work-to-Signal Ratio"
-date: 2026-02-14
+date: 2026-02-25
 author: Andrew Perkins
 tags: [AI, agentic AI, future of work, productivity, 4I model]
 draft: false
