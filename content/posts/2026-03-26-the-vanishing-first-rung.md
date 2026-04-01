@@ -4,7 +4,7 @@ date: 2026-03-26
 author: Andrew Perkins
 tags: ["AI", "future of work", "workforce automation", "higher education", "entry-level jobs", "4I model"]
 summary: "Tech companies cut 59,000 jobs in three months while posting record revenues. BlackRock's CEO worries about the class of 2026. The entry-level job ladder is disappearing. Here's what that actually means."
-draft: true
+draft: false
 ---
 
 The data this week is hard to look away from.
