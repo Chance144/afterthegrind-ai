@@ -4,7 +4,7 @@ date: 2026-04-02
 author: Andrew Perkins
 tags: ["AI", "higher education", "tokens", "Jensen Huang", "faculty", "students", "workforce"]
 summary: "Jensen Huang says if a $500,000 engineer isn't consuming $250,000 in tokens, something is broken. He's right. And higher education should be very uncomfortable with what that implies."
-draft: true
+draft: false
 ---
 
 Jensen Huang said something last month that should be pinned above every dean's door in America.
