@@ -1,5 +1,5 @@
 ---
-title: "If Your Engineers Aren't Burning Tokens, You Have a Problem. So Do Your Students."
+title: "If Your Faculty Aren't Burning Tokens, You Have a Problem. So Do Your Students."
 date: 2026-04-02
 author: Andrew Perkins
 tags: ["AI", "higher education", "tokens", "Jensen Huang", "faculty", "students", "workforce"]
