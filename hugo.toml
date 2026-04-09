@@ -42,6 +42,11 @@ copyright = '© 2026 Andrew Perkins'
     name = 'Subscribe'
     url = '/subscribe/'
     weight = 25
+  [[menu.main]]
+    identifier = 'assessment'
+    name = 'Find Your Archetype'
+    url = 'https://humanworkspectrum.com'
+    weight = 30
 
 [markup]
   [markup.goldmark]
