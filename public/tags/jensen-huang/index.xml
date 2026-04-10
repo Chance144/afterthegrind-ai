@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jensen Huang on After the Grind</title>
+    <link>https://afterthegrind.ai/tags/jensen-huang/</link>
+    <description>Recent content in Jensen Huang on After the Grind</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Andrew Perkins</copyright>
+    <lastBuildDate>Thu, 02 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://afterthegrind.ai/tags/jensen-huang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>If Your Faculty Aren&#39;t Burning Tokens, You Have a Problem. So Do Your Students.</title>
+      <link>https://afterthegrind.ai/posts/2026-04-02-if-your-engineers-arent-burning-tokens/</link>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://afterthegrind.ai/posts/2026-04-02-if-your-engineers-arent-burning-tokens/</guid>
+      <description>Jensen Huang says if a $500,000 engineer isn&amp;rsquo;t consuming $250,000 in tokens, something is broken. He&amp;rsquo;s right. And higher education should be very uncomfortable with what that implies.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Higher-Ed on After the Grind</title>
+    <link>https://afterthegrind.ai/tags/higher-ed/</link>
+    <description>Recent content in Higher-Ed on After the Grind</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Andrew Perkins</copyright>
+    <lastBuildDate>Fri, 10 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://afterthegrind.ai/tags/higher-ed/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Law That Is Changing the Education of Humanity</title>
+      <link>https://afterthegrind.ai/posts/2026-04-10-swansons-law-and-the-education-of-humanity/</link>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://afterthegrind.ai/posts/2026-04-10-swansons-law-and-the-education-of-humanity/</guid>
+      <description>&lt;p&gt;The math of the solar industry is not an anomaly. It is a template.&lt;/p&gt;&#xA;&lt;p&gt;In 1977, the cost of solar power was approximately six dollars per watt. Today, that cost has plummeted to well below twenty cents per watt. This collapse did not happen through random chance or minor incrementalism. It happened because of Swanson&amp;rsquo;s Law: for every doubling of cumulative solar panel production, the cost of solar energy drops by roughly twenty percent. A predictable, compounding decay of cost driven by scale and technological refinement.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

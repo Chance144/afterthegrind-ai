@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Infrastructure on After the Grind</title><link>https://afterthegrind.ai/tags/infrastructure/</link><description>Recent content in Infrastructure on After the Grind</description><generator>Hugo</generator><language>en-us</language><copyright>© 2026 Andrew Perkins</copyright><lastBuildDate>Tue, 31 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://afterthegrind.ai/tags/infrastructure/index.xml" rel="self" type="application/rss+xml"/><item><title>The Graph That Goes Down and to the Right</title><link>https://afterthegrind.ai/posts/2026-03-31-the-graph-that-goes-down-and-to-the-right/</link><pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate><guid>https://afterthegrind.ai/posts/2026-03-31-the-graph-that-goes-down-and-to-the-right/</guid><description>Germany shut down its last nuclear plant in 2025. The graph of their nuclear output is a straight line from 170 terawatt-hours down to zero. Every time you see a graph that goes down and to the right, it is failure. This one is no different.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Infrastructure on After the Grind</title>
+    <link>https://afterthegrind.ai/tags/infrastructure/</link>
+    <description>Recent content in Infrastructure on After the Grind</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Andrew Perkins</copyright>
+    <lastBuildDate>Tue, 31 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://afterthegrind.ai/tags/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Graph That Goes Down and to the Right</title>
+      <link>https://afterthegrind.ai/posts/2026-03-31-the-graph-that-goes-down-and-to-the-right/</link>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://afterthegrind.ai/posts/2026-03-31-the-graph-that-goes-down-and-to-the-right/</guid>
+      <description>Germany shut down its last nuclear plant in 2025. The graph of their nuclear output is a straight line from 170 terawatt-hours down to zero. Every time you see a graph that goes down and to the right, it is failure. This one is no different.</description>
+    </item>
+  </channel>
+</rss>

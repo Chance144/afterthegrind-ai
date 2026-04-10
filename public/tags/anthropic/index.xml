@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anthropic on After the Grind</title><link>https://afterthegrind.ai/tags/anthropic/</link><description>Recent content in Anthropic on After the Grind</description><generator>Hugo</generator><language>en-us</language><copyright>© 2026 Andrew Perkins</copyright><lastBuildDate>Fri, 06 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://afterthegrind.ai/tags/anthropic/index.xml" rel="self" type="application/rss+xml"/><item><title>The Gap Between Could and Does</title><link>https://afterthegrind.ai/posts/2026-03-06-the-gap-between-could-and-does/</link><pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate><guid>https://afterthegrind.ai/posts/2026-03-06-the-gap-between-could-and-does/</guid><description>Anthropic&amp;rsquo;s new labor market report reveals AI could automate far more jobs than it actually does. That gap is where human value lives.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anthropic on After the Grind</title>
+    <link>https://afterthegrind.ai/tags/anthropic/</link>
+    <description>Recent content in Anthropic on After the Grind</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© 2026 Andrew Perkins</copyright>
+    <lastBuildDate>Wed, 08 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://afterthegrind.ai/tags/anthropic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Model That Scared Its Creator</title>
+      <link>https://afterthegrind.ai/posts/2026-04-08-the-model-that-scared-its-creator/</link>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://afterthegrind.ai/posts/2026-04-08-the-model-that-scared-its-creator/</guid>
+      <description>Anthropic built a model too dangerous to release, and that fact alone tells you everything about where we are.</description>
+    </item>
+    <item>
+      <title>The Gap Between Could and Does</title>
+      <link>https://afterthegrind.ai/posts/2026-03-06-the-gap-between-could-and-does/</link>
+      <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://afterthegrind.ai/posts/2026-03-06-the-gap-between-could-and-does/</guid>
+      <description>Anthropic&amp;rsquo;s new labor market report reveals AI could automate far more jobs than it actually does. That gap is where human value lives.</description>
+    </item>
+  </channel>
+</rss>
