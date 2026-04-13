@@ -23,9 +23,22 @@
   #header h1 a{color:#eee;text-decoration:none}
   #header h1 span{color:#4fc3f7;font-weight:400}
   #header p{color:#555;font-size:12px;margin-top:2px}
-  #search{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#eee;padding:8px 16px;border-radius:20px;font-size:13px;width:260px;outline:none;transition:border-color .2s}
-  #search:focus{border-color:rgba(79,195,247,.5)}
-  #search::placeholder{color:#555}
+  #querybar{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:150;width:480px;max-width:calc(100vw - 40px)}
+  #qinput{background:rgba(15,15,25,.92);border:1px solid rgba(255,255,255,.15);color:#eee;padding:10px 18px;border-radius:12px;font-size:14px;width:100%;outline:none;transition:border-color .2s;backdrop-filter:blur(12px)}
+  #qinput:focus{border-color:rgba(79,195,247,.5)}
+  #qinput::placeholder{color:#555}
+  #qfilters{display:flex;gap:4px;margin-top:6px;flex-wrap:wrap}
+  .qf{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:#888;padding:4px 10px;border-radius:8px;font-size:11px;cursor:pointer;transition:all .15s}
+  .qf:hover{color:#ccc;border-color:rgba(255,255,255,.2)}
+  .qf.active{background:rgba(79,195,247,.15);color:#4fc3f7;border-color:rgba(79,195,247,.3)}
+  #qresults{display:none;background:rgba(15,15,25,.95);border:1px solid rgba(255,255,255,.1);border-radius:10px;margin-top:6px;max-height:400px;overflow-y:auto;backdrop-filter:blur(12px)}
+  .qr{display:flex;align-items:center;gap:10px;padding:10px 14px;cursor:pointer;transition:background .15s;border-bottom:1px solid rgba(255,255,255,.03)}
+  .qr:hover{background:rgba(79,195,247,.08)}
+  .qr:last-child{border-bottom:none}
+  .qr-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .qr-name{color:#eee;font-size:13px;font-weight:600;flex:1}
+  .qr-meta{color:#666;font-size:11px;white-space:nowrap}
+  .qr-empty{padding:14px;color:#555;font-size:13px;text-align:center}
   #legend{position:fixed;top:70px;right:12px;background:rgba(15,15,25,.88);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,.08);max-height:calc(100vh - 90px);overflow-y:auto;z-index:50}
   #legend h3{color:#aaa;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
   .li{display:flex;align-items:center;gap:8px;margin:4px 0;color:#aaa;font-size:12px;cursor:pointer;user-select:none;transition:color .15s}
@@ -59,7 +72,7 @@
     <h1><a href="/">After the Grind</a> <span>/ Knowledge Graph</span></h1>
     <p>Click any node to explore connections</p>
   </div>
-  <input id="search" type="text" placeholder="Search nodes...">
+
 </div>
 <div id="tooltip"></div>
 <div id="legend"><h3>Node Types</h3></div>
@@ -136,9 +149,27 @@ C.addEventListener('touchmove',e=>{if(e.touches.length===2){e.preventDefault();c
 document.getElementById('zin').onclick=()=>{tk*=1.3;redraw();};
 document.getElementById('zout').onclick=()=>{tk*=.7;redraw();};
 document.getElementById('zfit').onclick=()=>{const vis=nodes.filter(n=>!hidden.has(n.label));if(!vis.length)return;let x0=Infinity,x1=-Infinity,y0=Infinity,y1=-Infinity;vis.forEach(n=>{x0=Math.min(x0,n.x);x1=Math.max(x1,n.x);y0=Math.min(y0,n.y);y1=Math.max(y1,n.y);});const p=80;tk=Math.min(W/(x1-x0+p*2),H/(y1-y0+p*2),3);tx=W/2-((x0+x1)/2)*tk;ty=H/2-((y0+y1)/2)*tk;redraw();};
-document.getElementById('search').addEventListener('input',function(){searchQ=this.value;redraw();});
+// Query bar built after data loads
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDetail();});
 window.addEventListener('resize',()=>{C.width=W=innerWidth;C.height=H=innerHeight;redraw();});
+
+function buildQueryBar(){
+const bar=document.createElement('div');bar.id='querybar';
+bar.innerHTML='<input id="qinput" type="text" placeholder="Search nodes or ask a question..." autocomplete="off"><div id="qfilters"><button class="qf active" data-type="all">All</button><button class="qf" data-type="Essay">Essays</button><button class="qf" data-type="Concept">Concepts</button><button class="qf" data-type="Archetype">Archetypes</button><button class="qf" data-type="Person">People</button><button class="qf" data-type="Paper">Papers</button><button class="qf" data-type="Chapter">Chapters</button></div><div id="qresults"></div>';
+document.body.appendChild(bar);
+var input=document.getElementById('qinput'),results=document.getElementById('qresults'),af='all';
+document.querySelectorAll('.qf').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.qf').forEach(function(x){x.classList.remove('active')});this.classList.add('active');af=this.dataset.type;doS(input.value);});});
+input.addEventListener('input',function(){doS(this.value);});
+input.addEventListener('keydown',function(e){if(e.key==='Escape'){this.value='';results.style.display='none';searchQ='';selectedN=null;closeDetail();redraw();}if(e.key==='Enter'){var f=results.querySelector('.qr');if(f)f.click();}});
+function doS(q){searchQ=q;if(!q||q.length<2){results.style.display='none';redraw();return;}
+var ql=q.toLowerCase();var m=nodes.filter(function(n){if(hidden.has(n.label))return false;if(af!=='all'&&n.label!==af)return false;return(n.name||'').toLowerCase().includes(ql)||(n.description||'').toLowerCase().includes(ql);});
+m.sort(function(a,b){var an=(a.name||'').toLowerCase(),bn=(b.name||'').toLowerCase();var ae=an===ql?0:an.startsWith(ql)?1:2,be=bn===ql?0:bn.startsWith(ql)?1:2;if(ae!==be)return ae-be;var ac=links.filter(function(l){return l.source.id===a.id||l.target.id===a.id}).length;var bc=links.filter(function(l){return l.source.id===b.id||l.target.id===b.id}).length;return bc-ac;});
+m=m.slice(0,12);
+if(!m.length){results.innerHTML='<div class="qr-empty">No matches</div>';results.style.display='block';redraw();return;}
+results.innerHTML=m.map(function(n){var cn=links.filter(function(l){return l.source.id===n.id||l.target.id===n.id}).length;return'<div class="qr" data-id="'+n.id+'"><span class="qr-dot" style="background:'+(COL[n.label]||'#888')+'"></span><span class="qr-name">'+n.name+'</span><span class="qr-meta">'+(LABELS[n.label]||n.label)+' &middot; '+cn+' conn</span></div>';}).join('');
+results.style.display='block';
+results.querySelectorAll('.qr').forEach(function(el){el.addEventListener('click',function(){var id=parseInt(this.dataset.id);var t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);results.style.display='none';input.value=t.name;searchQ='';draw();}});});
+redraw();}}
 
 fetch('/data/graph.json').then(r=>r.json()).then(data=>{
   nodes=data.nodes;links=data.links;
@@ -150,6 +181,7 @@ fetch('/data/graph.json').then(r=>r.json()).then(data=>{
   types.forEach(t=>{const cnt=nodes.filter(n=>n.label===t).length;const d=document.createElement('div');d.className='li'+(hidden.has(t)?' dim':'');d.innerHTML='<div class="ld" style="background:'+(COL[t]||'#888')+'"></div>'+(LABELS[t]||t)+' ('+cnt+')';d.onclick=()=>{if(hidden.has(t))hidden.delete(t);else hidden.add(t);d.classList.toggle('dim');wake(.5);};leg.appendChild(d);});
   document.getElementById('stats').textContent=nodes.length+' nodes \u00b7 '+links.length+' connections \u00b7 Built by OCPI4';
   initPos();requestAnimationFrame(loop);
+  buildQueryBar();
   setTimeout(()=>document.getElementById('zfit').click(),3000);
 });
 </script>
