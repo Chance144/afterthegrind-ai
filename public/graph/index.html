@@ -175,15 +175,15 @@ results.innerHTML='<div class="q-ai"><span>No local matches.</span><button class
 results.style.display='block';redraw();return;
 }
 results.innerHTML=m.map(function(n){var cn=links.filter(function(l){return l.source.id===n.id||l.target.id===n.id}).length;return'<div class="qr" data-id="'+n.id+'"><span class="qr-dot" style="background:'+(COL[n.label]||'#888')+'"></span><span class="qr-name">'+n.name+'</span><span class="qr-meta">'+(LABELS[n.label]||n.label)+' &middot; '+cn+' conn</span></div>';}).join('');
+results.innerHTML+='<div class="q-ai"><span>Want deeper results?</span><button class="q-ai-btn" onclick="aiQuery(\''+q.replace(/'/g,'\\\'')+'\')">Ask AI \u26a1</button></div>';
 results.style.display='block';
 results.querySelectorAll('.qr').forEach(function(el){el.addEventListener('click',function(){var id=parseInt(this.dataset.id);var t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);results.style.display='none';input.value=t.name;searchQ='';draw();}});});
 redraw();}}
 
-var GRAPH_API='https://100.80.31.59:8080/graph-api';
 function aiQuery(q){
 var btn=document.querySelector('.q-ai-btn');if(btn){btn.disabled=true;btn.textContent='Thinking...';}
 var results=document.getElementById('qresults');
-fetch('http://192.168.8.179:8091/query',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})})
+fetch('/api/graph-query',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})})
 .then(function(r){return r.json();})
 .then(function(d){
 if(d.error){results.innerHTML='<div class="qr-empty">Error: '+d.error+'</div>';return;}
@@ -196,7 +196,7 @@ html+='<div class="qr" data-id="'+m.id+'"><span class="qr-dot" style="background
 }else{html+='<div class="qr-empty">No matches found</div>';}
 results.innerHTML=html;results.style.display='block';
 results.querySelectorAll('.qr').forEach(function(el){el.addEventListener('click',function(){var id=parseInt(this.dataset.id);var t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);results.style.display='none';searchQ='';draw();}});});
-}).catch(function(e){results.innerHTML='<div class="qr-empty">AI unavailable (local network only)</div>';});
+}).catch(function(e){results.innerHTML='<div class="qr-empty">AI query failed. Try again.</div>';});
 }
 
 fetch('/data/graph.json').then(r=>r.json()).then(data=>{
