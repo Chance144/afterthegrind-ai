@@ -39,6 +39,11 @@
   .qr-name{color:#eee;font-size:13px;font-weight:600;flex:1}
   .qr-meta{color:#666;font-size:11px;white-space:nowrap}
   .qr-empty{padding:14px;color:#555;font-size:13px;text-align:center}
+  .q-ai{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.03);color:#aaa;font-size:12px}
+  .q-ai-btn{background:rgba(79,195,247,.12);color:#4fc3f7;border:1px solid rgba(79,195,247,.25);padding:5px 12px;border-radius:8px;font-size:11px;cursor:pointer;transition:all .15s;white-space:nowrap}
+  .q-ai-btn:hover{background:rgba(79,195,247,.25)}
+  .q-ai-btn:disabled{opacity:.5;cursor:wait}
+  .q-explain{padding:10px 14px;color:#aaa;font-size:12px;font-style:italic;border-bottom:1px solid rgba(255,255,255,.05)}
   #legend{position:fixed;top:70px;right:12px;background:rgba(15,15,25,.88);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,.08);max-height:calc(100vh - 90px);overflow-y:auto;z-index:50}
   #legend h3{color:#aaa;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
   .li{display:flex;align-items:center;gap:8px;margin:4px 0;color:#aaa;font-size:12px;cursor:pointer;user-select:none;transition:color .15s}
@@ -165,11 +170,34 @@ function doS(q){searchQ=q;if(!q||q.length<2){results.style.display='none';redraw
 var ql=q.toLowerCase();var m=nodes.filter(function(n){if(hidden.has(n.label))return false;if(af!=='all'&&n.label!==af)return false;return(n.name||'').toLowerCase().includes(ql)||(n.description||'').toLowerCase().includes(ql);});
 m.sort(function(a,b){var an=(a.name||'').toLowerCase(),bn=(b.name||'').toLowerCase();var ae=an===ql?0:an.startsWith(ql)?1:2,be=bn===ql?0:bn.startsWith(ql)?1:2;if(ae!==be)return ae-be;var ac=links.filter(function(l){return l.source.id===a.id||l.target.id===a.id}).length;var bc=links.filter(function(l){return l.source.id===b.id||l.target.id===b.id}).length;return bc-ac;});
 m=m.slice(0,12);
-if(!m.length){results.innerHTML='<div class="qr-empty">No matches</div>';results.style.display='block';redraw();return;}
+if(!m.length){
+results.innerHTML='<div class="q-ai"><span>No local matches.</span><button class="q-ai-btn" onclick="aiQuery(\''+q.replace(/'/g,'\\\'')+'\')">Ask AI \u26a1</button></div>';
+results.style.display='block';redraw();return;
+}
 results.innerHTML=m.map(function(n){var cn=links.filter(function(l){return l.source.id===n.id||l.target.id===n.id}).length;return'<div class="qr" data-id="'+n.id+'"><span class="qr-dot" style="background:'+(COL[n.label]||'#888')+'"></span><span class="qr-name">'+n.name+'</span><span class="qr-meta">'+(LABELS[n.label]||n.label)+' &middot; '+cn+' conn</span></div>';}).join('');
 results.style.display='block';
 results.querySelectorAll('.qr').forEach(function(el){el.addEventListener('click',function(){var id=parseInt(this.dataset.id);var t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);results.style.display='none';input.value=t.name;searchQ='';draw();}});});
 redraw();}}
+
+var GRAPH_API='https://100.80.31.59:8080/graph-api';
+function aiQuery(q){
+var btn=document.querySelector('.q-ai-btn');if(btn){btn.disabled=true;btn.textContent='Thinking...';}
+var results=document.getElementById('qresults');
+fetch('http://192.168.8.179:8091/query',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})})
+.then(function(r){return r.json();})
+.then(function(d){
+if(d.error){results.innerHTML='<div class="qr-empty">Error: '+d.error+'</div>';return;}
+var html='';
+if(d.explanation)html+='<div class="q-explain">'+d.explanation+'</div>';
+if(d.matches&&d.matches.length){
+d.matches.forEach(function(m){
+html+='<div class="qr" data-id="'+m.id+'"><span class="qr-dot" style="background:'+(COL[m.label]||'#888')+'"></span><span class="qr-name">'+m.name+'</span><span class="qr-meta">'+(LABELS[m.label]||m.label)+'</span></div>';
+});
+}else{html+='<div class="qr-empty">No matches found</div>';}
+results.innerHTML=html;results.style.display='block';
+results.querySelectorAll('.qr').forEach(function(el){el.addEventListener('click',function(){var id=parseInt(this.dataset.id);var t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);results.style.display='none';searchQ='';draw();}});});
+}).catch(function(e){results.innerHTML='<div class="qr-empty">AI unavailable (local network only)</div>';});
+}
 
 fetch('/data/graph.json').then(r=>r.json()).then(data=>{
   nodes=data.nodes;links=data.links;
