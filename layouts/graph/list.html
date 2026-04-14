@@ -183,7 +183,7 @@ redraw();}}
 function aiQuery(q){
 var btn=document.querySelector('.q-ai-btn');if(btn){btn.disabled=true;btn.textContent='Thinking...';}
 var results=document.getElementById('qresults');
-fetch('/api/graph-query',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})})
+fetch('https://graph-api.drandrewperkins.com/query',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})})
 .then(function(r){return r.json();})
 .then(function(d){
 if(d.error){results.innerHTML='<div class="qr-empty">Error: '+d.error+'</div>';return;}
