@@ -1,13 +1,11 @@
 ---
 title: "The Involuntary Pilot Program"
 date: 2026-04-16
-author: "Andrew Perkins"
-tags: ["AI", "future of work", "workforce automation", "higher education", "4I model", "career strategy", "government", "white collar"]
-summary: "The GSA just lost 40% of its workforce and is now automating a million work hours to compensate. This isn't a cautionary tale. It's a preview of the substitution-versus-augmentation split playing out everywhere, and of what the 4I model actually protects against."
-draft: true
+draft: false
+tags: ["ai", "future-of-work", "workforce", "higher-education", "career-strategy"]
+description: "The GSA lost 40% of its workforce and is now automating a million work hours. This is the substitution-versus-augmentation split playing out in real time."
 ---
-
-Here is a real sentence from the news this week: the General Services Administration, after [losing nearly 40% of its total workforce](https://federalnewsnetwork.com/artificial-intelligence/2026/04/gsa-looks-to-automate-a-million-work-hours-after-losing-nearly-40-of-its-workforce/) under Trump administration downsizing, is now planning to use artificial intelligence to automate a million work hours of internal operations.
+The GSA just lost 40% of its workforce and is now automating a million work hours to compensate. This isn't a cautionary tale. It's a preview of the substitution-versus-augmentation split playing out everywhere, and of what the 4I model actually protects against.
 
 Read that again slowly. Forty percent of the people. Gone. Now AI fills the gap.
 
