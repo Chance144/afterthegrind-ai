@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Future-of-Work on After the Grind</title>
+    <title>Future of Work on After the Grind</title>
     <link>https://afterthegrind.ai/tags/future-of-work/</link>
-    <description>Recent content in Future-of-Work on After the Grind</description>
+    <description>Recent content in Future of Work on After the Grind</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2026 Andrew Perkins</copyright>
-    <lastBuildDate>Sat, 18 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://afterthegrind.ai/tags/future-of-work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Ian Beacraft Means for Universities</title>
+      <link>https://afterthegrind.ai/posts/2026-04-23-what-beacraft-means-for-universities/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://afterthegrind.ai/posts/2026-04-23-what-beacraft-means-for-universities/</guid>
+      <description>&lt;p&gt;Ian Beacraft&amp;rsquo;s insights force universities, especially business schools, to confront a fundamental question: What is the purpose of education in an era where artificial intelligence reshapes not just tasks but the very architecture of work? Beacraft argues that AI is not a tool but a platform that rewrites economic and organizational rules. This distinction is critical. If universities continue to teach business as if AI is merely a productivity enhancer, they risk preparing students for a world that no longer exists. The stakes are clear: students will enter workplaces where efficiency is ubiquitous, and survival depends on understanding systemic shifts, not incremental optimization. Business schools must pivot from technical training to cultivating systems thinking, cultural intelligence, and interdisciplinary agility.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Migration Has Changed</title>
       <link>https://afterthegrind.ai/posts/2026-04-18-the-migration-has-changed/</link>
