@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Policy on After the Grind</title>
-    <link>https://afterthegrind.ai/tags/policy/</link>
-    <description>Recent content in Policy on After the Grind</description>
+    <title>Competition on After the Grind</title>
+    <link>https://afterthegrind.ai/tags/competition/</link>
+    <description>Recent content in Competition on After the Grind</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2026 Andrew Perkins</copyright>
     <lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://afterthegrind.ai/tags/policy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://afterthegrind.ai/tags/competition/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Entrepreneurs Don&#39;t Have a Flag When the Chips Are Down</title>
       <link>https://afterthegrind.ai/posts/2026-04-28-entrepreneurs-dont-have-a-flag/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://afterthegrind.ai/posts/2026-04-28-entrepreneurs-dont-have-a-flag/</guid>
       <description>&lt;p&gt;There&amp;rsquo;s a conversation happening in boardrooms and congressional hearings about which AI models Americans should be allowed to use. The implicit assumption is that entrepreneurs will follow the rules, pick the approved tools, and compete accordingly.&lt;/p&gt;&#xA;&lt;p&gt;That assumption is wrong.&lt;/p&gt;&#xA;&lt;p&gt;When a founder is six months from running out of runway, they don&amp;rsquo;t care where the model was trained. When a small business owner is trying to cut costs before payroll, they don&amp;rsquo;t ask what country the API is hosted in. When a startup is staring down a competitor who just shipped a feature twice as fast, they use whatever tool closes that gap.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Graph That Goes Down and to the Right</title>
-      <link>https://afterthegrind.ai/posts/2026-03-31-the-graph-that-goes-down-and-to-the-right/</link>
-      <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://afterthegrind.ai/posts/2026-03-31-the-graph-that-goes-down-and-to-the-right/</guid>
-      <description>Germany shut down its last nuclear plant in 2025. The graph of their nuclear output is a straight line from 170 terawatt-hours down to zero. Every time you see a graph that goes down and to the right, it is failure. This one is no different.</description>
     </item>
   </channel>
 </rss>
