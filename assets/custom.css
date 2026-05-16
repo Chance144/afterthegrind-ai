@@ -1,20 +1,71 @@
+.atg-home-hero,
+.atg-home-hero *,
+.atg-framework,
+.atg-framework *,
+.atg-paths,
+.atg-paths *,
+.atg-start,
+.atg-start *,
+.atg-latest,
+.atg-latest * {
+  box-sizing: border-box;
+}
+
+main:has(.atg-home-hero) {
+  max-width: min(1120px, calc(100vw - 2rem)) !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.atg-home-hero,
+.atg-framework,
+.atg-paths,
+.atg-start,
+.atg-latest {
+  width: 100%;
+  max-width: none;
+  position: static;
+  left: auto;
+  margin-left: 0;
+  transform: none;
+}
+
 .atg-home-hero {
-  min-height: auto;
-  margin: -1rem 0 3rem;
   display: grid;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  margin-top: -1rem;
+  margin-bottom: 4rem;
   overflow: hidden;
   border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.74)),
-    url('/images/book-cover.jpg') center / cover no-repeat,
-    #1a120d;
+  background: #17120f;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
 }
 
 .atg-home-hero__content {
-  width: min(100%, 760px);
-  padding: clamp(1.75rem, 6vw, 3.75rem);
+  width: 100%;
+  min-width: 0;
+  padding: clamp(2rem, 5vw, 4rem);
   color: #fff;
+}
+
+.atg-home-hero__media {
+  align-self: stretch;
+  min-height: 100%;
+  margin: 0;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  background: #f5efe5;
+}
+
+.atg-home-hero__media img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .atg-home-hero__eyebrow,
@@ -29,18 +80,19 @@
 }
 
 .atg-home-hero h1 {
-  max-width: 680px;
+  max-width: 820px;
   margin: 0;
-  font-size: clamp(2.15rem, 5.4vw, 3.8rem);
+  font-size: clamp(2.4rem, 5vw, 4.9rem) !important;
+  font-weight: 800 !important;
   line-height: 0.98;
   letter-spacing: 0;
   color: #fff !important;
 }
 
 .atg-home-hero__lede {
-  max-width: 650px;
+  max-width: 720px;
   margin: 1.4rem 0 0;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 1.7vw, 1.25rem);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.86);
 }
@@ -70,17 +122,12 @@
   color: #fff;
 }
 
-.prose .atg-home-hero h1,
-.prose .atg-home-hero p,
-.prose .atg-home-hero a {
+.atg-home-hero .atg-action {
   color: #fff !important;
-}
-
-.prose .atg-home-hero .atg-action {
   text-decoration: none !important;
 }
 
-.prose .atg-home-hero .atg-action--primary {
+.atg-home-hero .atg-action--primary {
   color: #1a120d !important;
 }
 
@@ -96,7 +143,8 @@
 
 .atg-framework,
 .atg-start {
-  margin: 3rem 0;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
@@ -109,19 +157,21 @@
 .atg-framework h2,
 .atg-start h2 {
   margin: 0;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem) !important;
+  font-weight: 800 !important;
   line-height: 1.12;
   letter-spacing: 0;
 }
 
 .atg-framework p {
+  max-width: 780px;
   margin: 0.8rem 0 0;
   line-height: 1.7;
 }
 
 .atg-framework__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
 }
@@ -154,11 +204,12 @@
 }
 
 .atg-paths {
-  margin: 0 0 3rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
 }
 
 .atg-paths a {
-  flex: 1 1 190px;
+  flex: 1 1 220px;
   text-decoration: none;
 }
 
@@ -189,22 +240,104 @@
   margin-top: 2.5rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
+  .atg-home-hero,
+  .atg-framework,
+  .atg-paths,
+  .atg-start,
+  .atg-latest {
+    width: 100%;
+    max-width: 100%;
+    left: auto;
+    transform: none;
+  }
+
   .atg-home-hero {
-    margin-top: -1.25rem;
-    background:
-      linear-gradient(0deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.68)),
-      url('/images/book-cover.jpg') center / cover no-repeat,
-      #1a120d;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .atg-home-hero__media {
+    order: -1;
+    align-self: auto;
+    max-height: none;
+  }
+
+  .atg-home-hero__media img {
+    height: auto;
+    min-height: 0;
+    max-height: 420px;
   }
 
   .atg-home-hero__content {
-    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .atg-home-hero h1 {
+    width: 100%;
+    max-width: 100% !important;
+    font-size: clamp(1.85rem, 7vw, 2.7rem) !important;
+    overflow-wrap: anywhere;
+  }
+
+  .atg-home-hero__lede,
+  .atg-home-hero__actions {
     max-width: 100%;
-    font-size: clamp(2rem, 10vw, 3rem);
+    min-width: 0;
+  }
+
+  .atg-framework__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .atg-home-hero,
+  .atg-framework,
+  .atg-paths,
+  .atg-start,
+  .atg-latest {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .atg-home-hero {
+    margin-top: -0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .atg-home-hero__content {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.25rem;
+  }
+
+  .atg-home-hero h1 {
+    width: 100%;
+    max-width: 100% !important;
+    font-size: clamp(1.7rem, 8vw, 2.05rem) !important;
+    overflow-wrap: anywhere;
+  }
+
+  .atg-home-hero__lede,
+  .atg-home-hero__actions {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .atg-home-hero__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .atg-home-hero__media {
+    max-height: 340px;
+  }
+
+  .atg-home-hero__media img {
+    min-height: 260px;
+    max-height: 320px;
   }
 
   .atg-framework__grid {
