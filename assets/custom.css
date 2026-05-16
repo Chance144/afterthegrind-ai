@@ -1,0 +1,200 @@
+.atg-home-hero {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  min-height: min(76vh, 720px);
+  margin: -3.5rem 0 3.5rem -50vw;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.56) 52%, rgba(0, 0, 0, 0.12)),
+    url('/images/book-cover.jpg') right center / contain no-repeat,
+    #1a120d;
+}
+
+.atg-home-hero__content {
+  width: min(100%, 760px);
+  padding: clamp(2rem, 7vw, 5rem) max(2rem, calc((100vw - var(--w)) / 2 + 2rem));
+  color: #fff;
+}
+
+.atg-home-hero__eyebrow,
+.atg-section-label {
+  margin: 0 0 0.75rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #d97706;
+}
+
+.atg-home-hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.atg-home-hero__lede {
+  max-width: 650px;
+  margin: 1.4rem 0 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.atg-home-hero__actions,
+.atg-paths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.atg-home-hero__actions {
+  margin-top: 1.75rem;
+}
+
+.atg-action {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  border-radius: 6px;
+  padding: 0.65rem 1rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.atg-action--primary {
+  border-color: #fff;
+  background: #fff;
+  color: #1a120d;
+}
+
+.atg-action--quiet {
+  border-color: transparent;
+}
+
+.atg-framework,
+.atg-start {
+  margin: 3rem 0;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.dark .atg-framework,
+.dark .atg-start {
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+
+.atg-framework h2,
+.atg-start h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.atg-framework p {
+  margin: 0.8rem 0 0;
+  line-height: 1.7;
+}
+
+.atg-framework__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.atg-framework__grid div,
+.atg-paths a {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.dark .atg-framework__grid div,
+.dark .atg-paths a {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.atg-framework__grid strong,
+.atg-framework__grid span,
+.atg-paths span,
+.atg-paths strong {
+  display: block;
+}
+
+.atg-framework__grid span,
+.atg-paths strong {
+  margin-top: 0.35rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+.atg-paths {
+  margin: 0 0 3rem;
+}
+
+.atg-paths a {
+  flex: 1 1 190px;
+  text-decoration: none;
+}
+
+.atg-paths span {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #d97706;
+  text-transform: uppercase;
+}
+
+.atg-start ol {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+  list-style: decimal;
+}
+
+.atg-start li {
+  padding: 0.35rem 0;
+}
+
+.atg-start a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.atg-latest {
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 760px) {
+  .atg-home-hero {
+    min-height: 86vh;
+    background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.48) 58%, rgba(0, 0, 0, 0.18)),
+      url('/images/book-cover.jpg') top center / min(78vw, 360px) auto no-repeat,
+      #1a120d;
+  }
+
+  .atg-home-hero__content {
+    padding-top: min(62vh, 29rem);
+  }
+
+  .atg-home-hero h1 {
+    max-width: 11ch;
+  }
+
+  .atg-framework__grid {
+    grid-template-columns: 1fr;
+  }
+}
+

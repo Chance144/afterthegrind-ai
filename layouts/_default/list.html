@@ -12,50 +12,73 @@
 {{- end -}}
 
 <!-- Articles -->
-{{- $paginator := .Paginate $pages -}} {{- range $index, $page :=
-$paginator.Pages -}}<!---->
+{{- $paginator := .Paginate $pages -}}
 
-<!-- avatar -->
-{{- if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) -}}<!---->
-
-{{- $avatar_url := $.Scratch.Get "avatar_url" -}}<!---->
-{{- if or $avatar_url site.Params.name -}}
-<div class="-mt-2 mb-12 flex items-center">
-  {{- if $avatar_url -}}
-  <div
-    class="h-24 w-24 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 ltr:mr-5 ltr:-ml-1 rtl:-mr-1 rtl:ml-5 dark:bg-white/90!"
-  >
-    <img
-      class="not-prose my-0 h-full w-full rounded-full bg-black/5! hover:animate-spin dark:bg-black/80!"
-      src="{{- $avatar_url -}}"
-      alt="{{- site.Params.name | default site.Title -}}"
-    />
+{{- if and .IsHome (eq $paginator.PageNumber 1) -}}
+<section class="atg-home-hero">
+  <div class="atg-home-hero__content">
+    <p class="atg-home-hero__eyebrow">After the Grind</p>
+    <h1>What happens when AI does the work you were trained to do?</h1>
+    <p class="atg-home-hero__lede">
+      Andrew Perkins' field guide to professional identity after routine cognitive work collapses. For business students, early-career professionals, educators, and teams learning where human value moves next.
+    </p>
+    <div class="atg-home-hero__actions">
+      <a class="atg-action atg-action--primary" href="https://humanworkspectrum.com">Take the Assessment</a>
+      <a class="atg-action" href="/book/">Get the Book</a>
+      <a class="atg-action atg-action--quiet" href="#start-here">Start Reading</a>
+    </div>
   </div>
-  {{- end -}}<!---->
-  {{- if site.Params.name -}}
+</section>
+
+<section class="atg-framework" aria-label="The 4I model">
   <div>
-    <div class="mt-3 mb-1 text-2xl font-medium text-black dark:text-white">
-      {{- site.Params.name -}}
-    </div>
-    <div class="break-words">
-      {{- site.Params.bio | default (print `A personal blog by `
-      site.Params.name) -}}
-    </div>
+    <p class="atg-section-label">The 4I Model</p>
+    <h2>AI removes THE GRIND. Human value moves up.</h2>
+    <p>
+      The book maps the terrain where human contribution still matters: interpretation, integration, interpersonal connection, and imagination.
+    </p>
   </div>
-  {{- end -}}
-</div>
-{{- end -}}<!---->
+  <div class="atg-framework__grid">
+    <div><strong>Interpretive</strong><span>Turn information into judgment.</span></div>
+    <div><strong>Integrative</strong><span>Connect people, systems, and disciplines.</span></div>
+    <div><strong>Interpersonal</strong><span>Build trust when the room is uncertain.</span></div>
+    <div><strong>Imaginative</strong><span>Ask what future this work creates.</span></div>
+  </div>
+</section>
 
-<!-- Intro blurb (homepage only, first page) -->
-{{- if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) -}}
-<div class="mb-12 border-b border-black/10 pb-8 dark:border-white/20">
-  <p class="text-base leading-relaxed opacity-80">
-    Daily essays on AI, the future of work, and what happens when the machines take over the tasks. Written by <strong>Andrew Perkins</strong>, author of <a href="https://www.amazon.com/dp/B0GHT7DN7F"><em>After the Grind: Rethinking Your Business Career in the Age of Artificial Intelligence and Robotics</em></a> and Chair of the Department of Marketing and International Business at Washington State University's Carson College of Business.
-  </p>
-</div>
+<section class="atg-paths" aria-label="Reader paths">
+  <a href="https://humanworkspectrum.com">
+    <span>Find Your Archetype</span>
+    <strong>Take the Human Work Spectrum assessment.</strong>
+  </a>
+  <a href="/book/">
+    <span>Read the Book</span>
+    <strong>Paperback and Kindle are live on Amazon.</strong>
+  </a>
+  <a href="/subscribe/">
+    <span>Follow the Essays</span>
+    <strong>Get new field notes on AI, education, and work.</strong>
+  </a>
+</section>
+
+<section id="start-here" class="atg-start">
+  <p class="atg-section-label">Start Here</p>
+  <h2>Five essays that frame the problem</h2>
+  <ol>
+    <li><a href="/posts/2026-05-05-the-entry-point-moved/">The Entry Point Moved</a></li>
+    <li><a href="/posts/2026-03-19-the-grind-was-the-job/">The Grind Was the Job</a></li>
+    <li><a href="/posts/2026-03-26-the-vanishing-first-rung/">The Vanishing First Rung</a></li>
+    <li><a href="/posts/2026-04-21-when-ai-absorbs-the-entry-level-grind/">When AI Absorbs the Entry-Level Grind</a></li>
+    <li><a href="/posts/2026-02-13-the-grind-is-ending-faster-than-you-think/">The Grind Is Ending Faster Than You Think</a></li>
+  </ol>
+</section>
+
+<section class="atg-latest" aria-label="Latest essays">
+  <p class="atg-section-label">Latest Essays</p>
+</section>
 {{- end -}}
 
-{{- end -}}
+{{- range $index, $page := $paginator.Pages -}}<!---->
 
 <section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   {{- if gt .Weight 0 -}}
