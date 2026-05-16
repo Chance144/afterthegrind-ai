@@ -4,8 +4,6 @@
 .atg-framework *,
 .atg-paths,
 .atg-paths *,
-.atg-start,
-.atg-start *,
 .atg-latest,
 .atg-latest * {
   box-sizing: border-box;
@@ -20,7 +18,6 @@ main:has(.atg-home-hero) {
 .atg-home-hero,
 .atg-framework,
 .atg-paths,
-.atg-start,
 .atg-latest {
   width: 100%;
   max-width: none;
@@ -31,13 +28,9 @@ main:has(.atg-home-hero) {
 }
 
 .atg-home-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
-  gap: clamp(2rem, 4vw, 3.5rem);
-  align-items: center;
+  display: block;
   margin-top: 0;
   margin-bottom: clamp(4rem, 8vw, 6rem);
-  overflow: hidden;
   border-radius: 8px;
   background: #17120f;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
@@ -48,24 +41,6 @@ main:has(.atg-home-hero) {
   min-width: 0;
   padding: clamp(2.5rem, 5vw, 4.25rem);
   color: #fff;
-}
-
-.atg-home-hero__media {
-  align-self: stretch;
-  min-height: 100%;
-  margin: 0;
-  padding: clamp(1rem, 2vw, 1.5rem);
-  background: #f5efe5;
-}
-
-.atg-home-hero__media img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  min-height: 360px;
-  object-fit: contain;
-  object-position: center;
 }
 
 .atg-home-hero__eyebrow,
@@ -101,11 +76,12 @@ main:has(.atg-home-hero) {
 .atg-paths {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .atg-home-hero__actions {
-  margin-top: 2rem;
+  margin-top: 2.25rem;
+  gap: 1rem 1.1rem;
 }
 
 .atg-action {
@@ -115,7 +91,7 @@ main:has(.atg-home-hero) {
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.44);
   border-radius: 6px;
-  padding: 0.65rem 1rem;
+  padding: 0.75rem 1.05rem;
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-weight: 700;
   text-decoration: none;
@@ -135,14 +111,11 @@ main:has(.atg-home-hero) {
   border-color: #fff;
   background: #fff;
   color: #1a120d;
-}
-
-.atg-action--quiet {
-  border-color: transparent;
+  margin-right: 0.35rem;
 }
 
 .atg-framework,
-.atg-start {
+.atg-paths {
   margin-top: clamp(4rem, 7vw, 5.5rem);
   margin-bottom: clamp(4rem, 7vw, 5.5rem);
   padding-bottom: clamp(3rem, 6vw, 4rem);
@@ -150,12 +123,11 @@ main:has(.atg-home-hero) {
 }
 
 .dark .atg-framework,
-.dark .atg-start {
+.dark .atg-paths {
   border-bottom-color: rgba(255, 255, 255, 0.18);
 }
 
-.atg-framework h2,
-.atg-start h2 {
+.atg-framework h2 {
   margin: 0;
   font-size: clamp(1.85rem, 3vw, 2.35rem) !important;
   font-weight: 800 !important;
@@ -203,11 +175,6 @@ main:has(.atg-home-hero) {
   opacity: 0.75;
 }
 
-.atg-paths {
-  margin-top: 0;
-  margin-bottom: clamp(4rem, 7vw, 5.5rem);
-}
-
 .atg-paths a {
   flex: 1 1 220px;
   text-decoration: none;
@@ -221,21 +188,6 @@ main:has(.atg-home-hero) {
   text-transform: uppercase;
 }
 
-.atg-start ol {
-  margin-top: 1.25rem;
-  padding-left: 1.25rem;
-  list-style: decimal;
-}
-
-.atg-start li {
-  padding: 0.45rem 0;
-}
-
-.atg-start a {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
 .atg-latest {
   margin-top: 3rem;
 }
@@ -244,30 +196,11 @@ main:has(.atg-home-hero) {
   .atg-home-hero,
   .atg-framework,
   .atg-paths,
-  .atg-start,
   .atg-latest {
     width: 100%;
     max-width: 100%;
     left: auto;
     transform: none;
-  }
-
-  .atg-home-hero {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .atg-home-hero__media {
-    order: -1;
-    align-self: auto;
-    max-height: none;
-  }
-
-  .atg-home-hero__media img {
-    height: auto;
-    min-height: 0;
-    max-height: 420px;
   }
 
   .atg-home-hero__content {
@@ -298,7 +231,6 @@ main:has(.atg-home-hero) {
   .atg-home-hero,
   .atg-framework,
   .atg-paths,
-  .atg-start,
   .atg-latest {
     width: 100%;
     max-width: 100%;
@@ -335,13 +267,8 @@ main:has(.atg-home-hero) {
     gap: 0.65rem;
   }
 
-  .atg-home-hero__media {
-    max-height: 340px;
-  }
-
-  .atg-home-hero__media img {
-    min-height: 260px;
-    max-height: 320px;
+  .atg-action--primary {
+    margin-right: 0;
   }
 
   .atg-framework__grid {

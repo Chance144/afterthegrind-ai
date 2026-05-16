@@ -25,12 +25,9 @@
     <div class="atg-home-hero__actions">
       <a class="atg-action atg-action--primary" href="https://humanworkspectrum.com">Take the Assessment</a>
       <a class="atg-action" href="/book/">Get the Book</a>
-      <a class="atg-action atg-action--quiet" href="#start-here">Start Reading</a>
+      <a class="atg-action" href="/posts/">Read the Essays</a>
     </div>
   </div>
-  <figure class="atg-home-hero__media" aria-label="After the Grind book cover">
-    <img src="/images/book-cover.jpg" alt="After the Grind book cover">
-  </figure>
 </section>
 
 <section class="atg-framework not-prose" aria-label="The 4I model">
@@ -63,24 +60,9 @@
     <strong>Get new field notes on AI, education, and work.</strong>
   </a>
 </section>
-
-<section id="start-here" class="atg-start not-prose">
-  <p class="atg-section-label">Start Here</p>
-  <h2>Five essays that frame the problem</h2>
-  <ol>
-    <li><a href="/posts/2026-05-05-the-entry-point-moved/">The Entry Point Moved</a></li>
-    <li><a href="/posts/2026-03-19-the-grind-was-the-job/">The Grind Was the Job</a></li>
-    <li><a href="/posts/2026-03-26-the-vanishing-first-rung/">The Vanishing First Rung</a></li>
-    <li><a href="/posts/2026-04-21-when-ai-absorbs-the-entry-level-grind/">When AI Absorbs the Entry-Level Grind</a></li>
-    <li><a href="/posts/2026-02-13-the-grind-is-ending-faster-than-you-think/">The Grind Is Ending Faster Than You Think</a></li>
-  </ol>
-</section>
-
-<section class="atg-latest not-prose" aria-label="Latest essays">
-  <p class="atg-section-label">Latest Essays</p>
-</section>
 {{- end -}}
 
+{{- if not .IsHome -}}
 {{- range $index, $page := $paginator.Pages -}}<!---->
 
 <section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
@@ -113,6 +95,7 @@
   >
   {{- end -}}
 </nav>
+{{- end -}}<!---->
 {{- end -}}<!---->
 
 {{- end -}}
