@@ -1,21 +1,19 @@
 .atg-home-hero {
-  position: relative;
-  left: 50%;
-  width: 100vw;
-  min-height: min(76vh, 720px);
-  margin: -3.5rem 0 3.5rem -50vw;
+  min-height: auto;
+  margin: -1rem 0 3rem;
   display: grid;
   align-items: end;
   overflow: hidden;
+  border-radius: 8px;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.56) 52%, rgba(0, 0, 0, 0.12)),
-    url('/images/book-cover.jpg') right center / contain no-repeat,
+    linear-gradient(90deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.74)),
+    url('/images/book-cover.jpg') center / cover no-repeat,
     #1a120d;
 }
 
 .atg-home-hero__content {
   width: min(100%, 760px);
-  padding: clamp(2rem, 7vw, 5rem) max(2rem, calc((100vw - var(--w)) / 2 + 2rem));
+  padding: clamp(1.75rem, 6vw, 3.75rem);
   color: #fff;
 }
 
@@ -31,11 +29,12 @@
 }
 
 .atg-home-hero h1 {
-  max-width: 12ch;
+  max-width: 680px;
   margin: 0;
-  font-size: clamp(2.4rem, 7vw, 5.4rem);
+  font-size: clamp(2.15rem, 5.4vw, 3.8rem);
   line-height: 0.98;
   letter-spacing: 0;
+  color: #fff !important;
 }
 
 .atg-home-hero__lede {
@@ -69,6 +68,20 @@
   font-weight: 700;
   text-decoration: none;
   color: #fff;
+}
+
+.prose .atg-home-hero h1,
+.prose .atg-home-hero p,
+.prose .atg-home-hero a {
+  color: #fff !important;
+}
+
+.prose .atg-home-hero .atg-action {
+  text-decoration: none !important;
+}
+
+.prose .atg-home-hero .atg-action--primary {
+  color: #1a120d !important;
 }
 
 .atg-action--primary {
@@ -178,23 +191,23 @@
 
 @media (max-width: 760px) {
   .atg-home-hero {
-    min-height: 86vh;
+    margin-top: -1.25rem;
     background:
-      linear-gradient(0deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.48) 58%, rgba(0, 0, 0, 0.18)),
-      url('/images/book-cover.jpg') top center / min(78vw, 360px) auto no-repeat,
+      linear-gradient(0deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.68)),
+      url('/images/book-cover.jpg') center / cover no-repeat,
       #1a120d;
   }
 
   .atg-home-hero__content {
-    padding-top: min(62vh, 29rem);
+    padding: 1.5rem;
   }
 
   .atg-home-hero h1 {
-    max-width: 11ch;
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 3rem);
   }
 
   .atg-framework__grid {
     grid-template-columns: 1fr;
   }
 }
-

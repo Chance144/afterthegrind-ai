@@ -15,7 +15,7 @@
 {{- $paginator := .Paginate $pages -}}
 
 {{- if and .IsHome (eq $paginator.PageNumber 1) -}}
-<section class="atg-home-hero">
+<section class="atg-home-hero not-prose">
   <div class="atg-home-hero__content">
     <p class="atg-home-hero__eyebrow">After the Grind</p>
     <h1>What happens when AI does the work you were trained to do?</h1>
@@ -30,7 +30,7 @@
   </div>
 </section>
 
-<section class="atg-framework" aria-label="The 4I model">
+<section class="atg-framework not-prose" aria-label="The 4I model">
   <div>
     <p class="atg-section-label">The 4I Model</p>
     <h2>AI removes THE GRIND. Human value moves up.</h2>
@@ -46,7 +46,7 @@
   </div>
 </section>
 
-<section class="atg-paths" aria-label="Reader paths">
+<section class="atg-paths not-prose" aria-label="Reader paths">
   <a href="https://humanworkspectrum.com">
     <span>Find Your Archetype</span>
     <strong>Take the Human Work Spectrum assessment.</strong>
@@ -61,7 +61,7 @@
   </a>
 </section>
 
-<section id="start-here" class="atg-start">
+<section id="start-here" class="atg-start not-prose">
   <p class="atg-section-label">Start Here</p>
   <h2>Five essays that frame the problem</h2>
   <ol>
@@ -73,7 +73,7 @@
   </ol>
 </section>
 
-<section class="atg-latest" aria-label="Latest essays">
+<section class="atg-latest not-prose" aria-label="Latest essays">
   <p class="atg-section-label">Latest Essays</p>
 </section>
 {{- end -}}
