@@ -37,11 +37,9 @@ main:has(.atg-home-hero) {
   margin-bottom: 3rem;
 }
 
-/* Flex column, everything centered */
+/* Content: block with text-align center + margin:auto on children */
 .atg-home-hero__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
   text-align: center;
   padding: 1rem 0 0;
 }
@@ -137,13 +135,11 @@ main:has(.atg-home-hero) {
 /* Book cover — centred below buttons */
 .atg-home-hero__book {
   margin-top: 2.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .atg-home-hero__book a {
-  display: block;
+  display: inline-block;
   line-height: 0;
 }
 
