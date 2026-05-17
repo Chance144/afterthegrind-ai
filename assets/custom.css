@@ -139,13 +139,13 @@ main:has(.atg-home-hero) {
 }
 
 .atg-home-hero__book a {
-  display: block;
+  display: table;
+  margin: 0 auto;
   line-height: 0;
 }
 
 .atg-home-hero__book img {
   display: block;
-  margin: 0 auto;
   width: clamp(140px, 16vw, 200px);
   height: auto;
   border-radius: 4px;
