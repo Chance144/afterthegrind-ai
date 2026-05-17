@@ -172,7 +172,8 @@ main:has(.atg-home-hero) {
 .atg-paths a {
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 8px;
-  padding: 1.15rem;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
 }
 
 .dark .atg-framework__grid div,
@@ -198,6 +199,26 @@ main:has(.atg-home-hero) {
 .atg-paths a {
   flex: 1 1 220px;
   text-decoration: none;
+  color: inherit;
+}
+
+.atg-home-copyright {
+  text-align: center;
+  margin-top: clamp(3rem, 5vw, 4rem);
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.82rem;
+  opacity: 0.55;
+  letter-spacing: 0.03em;
+}
+
+.dark .atg-home-copyright {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+.atg-home-copyright a {
+  text-decoration: underline;
 }
 
 .atg-paths span {
