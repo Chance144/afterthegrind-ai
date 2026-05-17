@@ -68,6 +68,28 @@ main:has(.atg-home-hero) {
   opacity: 0.82;
 }
 
+.atg-home-hero__book {
+  margin: 2.5rem auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.atg-home-hero__book img {
+  width: clamp(120px, 14vw, 180px);
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  transition: transform 0.2s ease;
+}
+
+.atg-home-hero__book img:hover {
+  transform: scale(1.03);
+}
+
+.dark .atg-home-hero__book img {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
 .atg-home-hero__actions,
 .atg-paths {
   display: flex;
