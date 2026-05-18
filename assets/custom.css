@@ -113,7 +113,6 @@ main:has(.atg-home-hero) {
 }
 
 .atg-home-hero .atg-action {
-  color: inherit !important;
   text-decoration: none !important;
 }
 
