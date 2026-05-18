@@ -15,59 +15,57 @@
 {{- $paginator := .Paginate $pages -}}
 
 {{- if and .IsHome (eq $paginator.PageNumber 1) -}}
-<section class="atg-home-hero not-prose">
-  <div class="atg-home-hero__content">
-    <p class="atg-home-hero__eyebrow">After the Grind</p>
-    <h1>What happens when AI does the work you were trained to do?</h1>
-    <p class="atg-home-hero__lede">
+<!-- ===== HERO ===== -->
+<section class="atg-home-hero not-prose" style="width:100%;margin-bottom:3rem">
+  <div style="width:100%;text-align:center;padding:1rem 0 0">
+    <p style="margin:0 0 1rem;font-family:ui-sans-serif,system-ui,sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#d97706">After the Grind</p>
+    <h1 style="margin:0 auto;max-width:820px;width:100%;font-size:clamp(2.4rem,5vw,4rem);font-weight:800;line-height:1.04;letter-spacing:-.01em;text-align:center">What happens when AI does the work you were trained to do?</h1>
+    <p style="margin:1.5rem auto 0;max-width:640px;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.7;opacity:.82;text-align:center">
       Andrew Perkins' field guide to professional identity after routine cognitive work collapses. For business students, early-career professionals, educators, and teams learning where human value moves next.
     </p>
-    <div class="atg-home-hero__actions">
-      <a class="atg-action atg-action--primary" href="https://humanworkspectrum.com">Take the Assessment</a>
-      <a class="atg-action" href="/book/">Get the Book</a>
-      <a class="atg-action" href="/posts/">Read the Essays</a>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 1.25rem;margin:2.25rem auto 0;width:100%;max-width:740px">
+      <a class="atg-action atg-action--primary" href="https://humanworkspectrum.com" style="display:inline-flex;align-items:center;justify-content:center">Take the Assessment</a>
+      <a class="atg-action" href="/book/" style="display:inline-flex;align-items:center;justify-content:center">Get the Book</a>
+      <a class="atg-action" href="/posts/" style="display:inline-flex;align-items:center;justify-content:center">Read the Essays</a>
     </div>
-    <div class="atg-home-hero__book" style="text-align:center;width:100%;margin-top:2.5rem">
+    <div style="margin-top:2.5rem;text-align:center">
       <a href="/book/" style="display:inline-block;line-height:0">
-        <img src="/images/book-cover.jpg" alt="After the Grind book cover" style="display:block;width:clamp(140px,16vw,200px);height:auto" width="180" height="270">
+        <img src="/images/book-cover.jpg" alt="After the Grind book cover" style="display:block;width:clamp(140px,16vw,200px);height:auto;border-radius:4px;box-shadow:0 8px 36px rgba(0,0,0,.28)" width="180" height="270">
       </a>
     </div>
   </div>
 </section>
 
-<section class="atg-framework not-prose" aria-label="The 4I model">
-  <div class="atg-framework__intro">
-    <p class="atg-section-label">The 4I Model</p>
-    <h2>AI removes THE GRIND. Human value moves up.</h2>
-    <p>
-      The book maps the terrain where human contribution still matters: interpretation, integration, interpersonal connection, and imagination.
+<!-- ===== 4I MODEL ===== -->
+<section class="atg-framework not-prose" aria-label="The 4I model" style="width:100%;margin-top:3rem;margin-bottom:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(0,0,0,.12)">
+  <div style="text-align:center;margin-bottom:2.5rem">
+    <h2 style="margin:0 auto;font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.1;letter-spacing:-.01em;text-align:center">The 4I Model</h2>
+    <p style="max-width:700px;margin:1rem auto 0;font-size:clamp(.95rem,1.2vw,1.05rem);line-height:1.7;opacity:.82;text-align:center">
+      AI removes the grind. Human value moves up. The book maps the terrain where your contribution still matters — four dimensions that machines can assist but never replace.
     </p>
   </div>
   <div class="atg-framework__grid">
-    <div><strong>Interpretive</strong><span>Turn information into judgment.</span></div>
-    <div><strong>Integrative</strong><span>Connect people, systems, and disciplines.</span></div>
-    <div><strong>Interpersonal</strong><span>Build trust when the room is uncertain.</span></div>
-    <div><strong>Imaginative</strong><span>Ask what future this work creates.</span></div>
+    <div style="text-align:center">
+      <strong style="display:block;font-size:1.1rem;margin-bottom:.5rem">Interpretive</strong>
+      <span style="display:block;font-size:.9rem;line-height:1.6;opacity:.75">You turn raw information into judgment. Where AI produces output, you provide meaning — reading context, spotting what matters, and making the call that data alone cannot.</span>
+    </div>
+    <div style="text-align:center">
+      <strong style="display:block;font-size:1.1rem;margin-bottom:.5rem">Integrative</strong>
+      <span style="display:block;font-size:.9rem;line-height:1.6;opacity:.75">You connect people, systems, and disciplines. The hardest problems cross boundaries that specialization created. You see the whole, synthesize across domains, and build bridges others can't.</span>
+    </div>
+    <div style="text-align:center">
+      <strong style="display:block;font-size:1.1rem;margin-bottom:.5rem">Interpersonal</strong>
+      <span style="display:block;font-size:.9rem;line-height:1.6;opacity:.75">You build trust when the room is uncertain. Relationships, influence, and the ability to move people toward shared goals — these compound over a career in ways no algorithm can replicate.</span>
+    </div>
+    <div style="text-align:center">
+      <strong style="display:block;font-size:1.1rem;margin-bottom:.5rem">Imaginative</strong>
+      <span style="display:block;font-size:.9rem;line-height:1.6;opacity:.75">You ask what future this work creates. Vision, originality, and the ability to generate genuinely new ideas remain distinctly human — and increasingly, the scarce input that AI scales everything else around.</span>
+    </div>
   </div>
 </section>
 
-<section class="atg-paths not-prose" aria-label="Reader paths">
-  <a href="https://humanworkspectrum.com">
-    <span>Find Your Archetype</span>
-    <strong>Take the Human Work Spectrum assessment.</strong>
-  </a>
-  <a href="/book/">
-    <span>Read the Book</span>
-    <strong>Paperback and Kindle are live on Amazon.</strong>
-  </a>
-  <a href="/subscribe/">
-    <span>Follow the Essays</span>
-    <strong>Get new field notes on AI, education, and work.</strong>
-  </a>
-</section>
-
-<div class="atg-home-copyright not-prose">
-  <p>© 2026 Andrew Perkins · <a href="https://humanworkspectrum.com" target="_blank" rel="noopener">humanworkspectrum.com</a></p>
+<div class="atg-home-copyright not-prose" style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(0,0,0,.1);font-family:ui-sans-serif,system-ui,sans-serif;font-size:.82rem;opacity:.55;letter-spacing:.03em">
+  <p>© 2026 Andrew Perkins</p>
 </div>
 {{- end -}}
 
