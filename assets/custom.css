@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+/* Make nav bar match content width on homepage */
+body:has(.atg-home-hero) {
+  --w: min(1060px, calc(100vw - 3rem));
+}
+
 /* Main container: widen for homepage */
 main:has(.atg-home-hero) {
   max-width: min(1060px, calc(100vw - 2rem)) !important;
@@ -55,7 +60,7 @@ main:has(.atg-home-hero) {
 }
 
 .atg-home-hero h1 {
-  margin: 0;
+  margin: 0 auto;
   max-width: 820px;
   width: 100%;
   font-size: clamp(2.4rem, 5vw, 4rem) !important;
@@ -65,7 +70,7 @@ main:has(.atg-home-hero) {
 }
 
 .atg-home-hero__lede {
-  margin: 1.5rem 0 0;
+  margin: 1.5rem auto 0;
   max-width: 640px;
   font-size: clamp(1rem, 1.5vw, 1.15rem);
   line-height: 1.7;
@@ -78,7 +83,7 @@ main:has(.atg-home-hero) {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem 1.25rem;
-  margin-top: 2.25rem;
+  margin: 2.25rem auto 0;
   width: 100%;
   max-width: 740px;
 }
