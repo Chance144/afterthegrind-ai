@@ -102,7 +102,7 @@ main:has(.atg-home-hero) {
   justify-content: center;
   border: 1.5px solid rgba(0, 0, 0, 0.3);
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.65);
+  background: #ffffff;
   padding: 0.8rem 1.25rem;
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-size: 0.9rem;
