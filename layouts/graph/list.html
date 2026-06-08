@@ -132,7 +132,7 @@ function showDetail(n){
   const order=['Essay','Concept','Archetype','Chapter','Dimension','Paper','Person','Project','Source','Organization','Book','Topic','Event'];
   order.forEach(type=>{if(!grouped[type])return;html+='<div class="d-section"><h4>'+(LABELS[type]||type)+' ('+grouped[type].length+')</h4>';grouped[type].sort((a,b)=>(a.node.name||'').localeCompare(b.node.name||''));grouped[type].slice(0,25).forEach(c=>{html+='<a class="d-link" data-id="'+c.node.id+'"><span class="d-link-badge">'+c.rel+'</span>'+c.node.name+'</a>';});if(grouped[type].length>25)html+='<div style="color:#444;font-size:11px;padding:4px 0">+'+(grouped[type].length-25)+' more</div>';html+='</div>';});
   el.innerHTML=html;document.getElementById('detail').classList.add('open');
-  el.querySelectorAll('.d-link').forEach(link=>{link.addEventListener('click',function(){const id=parseInt(this.dataset.id);const t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);draw();}});});
+  el.querySelectorAll('.d-link').forEach(link=>{link.addEventListener('click',function(){const id=this.dataset.id;const t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);draw();}});});
   draw();
 }
 function closeDetail(){document.getElementById('detail').classList.remove('open');selectedN=null;draw();}
@@ -177,7 +177,7 @@ results.style.display='block';redraw();return;
 results.innerHTML=m.map(function(n){var cn=links.filter(function(l){return l.source.id===n.id||l.target.id===n.id}).length;return'<div class="qr" data-id="'+n.id+'"><span class="qr-dot" style="background:'+(COL[n.label]||'#888')+'"></span><span class="qr-name">'+n.name+'</span><span class="qr-meta">'+(LABELS[n.label]||n.label)+' &middot; '+cn+' conn</span></div>';}).join('');
 results.innerHTML+='<div class="q-ai"><span>Want deeper results?</span><button class="q-ai-btn" onclick="aiQuery(\''+q.replace(/'/g,'\\\'')+'\')">Ask AI \u26a1</button></div>';
 results.style.display='block';
-results.querySelectorAll('.qr').forEach(function(el){el.addEventListener('click',function(){var id=parseInt(this.dataset.id);var t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);results.style.display='none';input.value=t.name;searchQ='';draw();}});});
+results.querySelectorAll('.qr').forEach(function(el){el.addEventListener('click',function(){var id=this.dataset.id;var t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);results.style.display='none';input.value=t.name;searchQ='';draw();}});});
 redraw();}}
 
 function aiQuery(q){
@@ -195,7 +195,7 @@ html+='<div class="qr" data-id="'+m.id+'"><span class="qr-dot" style="background
 });
 }else{html+='<div class="qr-empty">No matches found</div>';}
 results.innerHTML=html;results.style.display='block';
-results.querySelectorAll('.qr').forEach(function(el){el.addEventListener('click',function(){var id=parseInt(this.dataset.id);var t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);results.style.display='none';searchQ='';draw();}});});
+results.querySelectorAll('.qr').forEach(function(el){el.addEventListener('click',function(){var id=this.dataset.id;var t=nodeMap[id];if(t){tx=W/2-t.x*tk;ty=H/2-t.y*tk;showDetail(t);results.style.display='none';searchQ='';draw();}});});
 }).catch(function(e){results.innerHTML='<div class="qr-empty">AI query failed. Try again.</div>';});
 }
 
